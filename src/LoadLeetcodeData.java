@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LoadLeetcodeData {
     public void loadStartingData() throws IOException {
-        Scanner leetcodeUsernames = new Scanner(new File("src/LeetcodeUsernames"));
+        Scanner leetcodeUsernames = new Scanner(new File("src/data/LeetcodeUsernames"));
         String output = "";
 
         while(leetcodeUsernames.hasNext()){
@@ -38,14 +38,14 @@ public class LoadLeetcodeData {
             output += easyText+" "+mediumText+ " " + hardText + "\n";
         }
 
-        FileWriter fw = new FileWriter("src/StartingData");
+        FileWriter fw = new FileWriter("src/data/StartingData");
         fw.write(output);
         fw.close();
     }
 
     public void loadChangeInData() throws IOException{
-        Scanner leetcodeUsernames = new Scanner(new File("src/LeetcodeUsernames"));
-        Scanner startingValues = new Scanner(new File("src/StartingData"));
+        Scanner leetcodeUsernames = new Scanner(new File("src/data/LeetcodeUsernames"));
+        Scanner startingValues = new Scanner(new File("src/data/StartingData"));
         String output = "";
 
         while(leetcodeUsernames.hasNext()){
@@ -89,7 +89,7 @@ public class LoadLeetcodeData {
             output += easyText+" "+mediumText+ " " + hardText + "\n";
         }
 
-        FileWriter fw = new FileWriter("src/ChangeInData");
+        FileWriter fw = new FileWriter("src/data/ChangeInData");
         fw.write(output);
         fw.close();
     }
